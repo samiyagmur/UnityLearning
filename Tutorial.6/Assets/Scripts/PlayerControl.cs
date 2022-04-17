@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerControl : MonoBehaviour
 {
     public float horizontalInput;
     public float speed = 10.0f;
     public float xRange = 15f;
+    public GameObject projectilePrefab;
+    
     void Start()
     {
         
@@ -16,7 +19,13 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         
-        
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Launch a projectile from the player
+           Instantiate(projectilePrefab,transform.position,projectilePrefab.transform.rotation);           
+
+        }
 
         
 
