@@ -5,13 +5,24 @@ using UnityEngine;
 public class DogDetectCollision : MonoBehaviour
 {
 
-    private void OnTriggerEnter (Collider other)
-    {       
-            Destroy(gameObject);
-            Debug.Log("Game Over");
+    int healts;
 
-            UnityEditor.EditorApplication.isPlaying = false;
+    private PlayerControllerX playerControllerX;
+
+    private void Start()
+    {
+        playerControllerX = FindObjectOfType<PlayerControllerX>();
     }
 
-    
+    private void OnTriggerEnter (Collider other)
+    {
+        healts = playerControllerX.Healt;
+
+        Destroy(other.gameObject);
+        healts--;
+
+        gameObject.GetComponent<PlayerControllerX>().Healt = healts;
+    }
+
+
 }

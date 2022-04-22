@@ -484,7 +484,6 @@ GameObject:
   - component: {fileID: 4321340569036234872}
   - component: {fileID: 5570515330538311333}
   - component: {fileID: -3239108896677634602}
-  - component: {fileID: -1385611262786928418}
   m_Layer: 0
   m_Name: DogVertical
   m_TagString: Dog
@@ -600,18 +599,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.10413685, y: 0.1889336, z: 0.26051486}
   m_Center: {x: 0.006618214, y: 0.086480014, z: 0.0243616}
---- !u!114 &-1385611262786928418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4321340570223847681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d429fdef000674ba6879ffa54beb54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4321340570223848263
 GameObject:
   m_ObjectHideFlags: 0
