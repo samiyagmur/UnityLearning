@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,35 +8,33 @@ public class DestroyOutOfBoundsX : MonoBehaviour
     private float leftLimit = -30f;
     private float bottomLimit = -5f;
     private float zLimit = 10f;
-    //PlayerControllerX playerController;
-    
-    // Update is called once per frame
-    
-        
-   
+    private PlayerControllerX playerController;
+
+    private void Awake()
+    {
+        playerController = FindObjectOfType<PlayerControllerX>();
+    }
+
     void Update()
     {
-        int healts= gameObject.GetComponent<PlayerControllerX>().Healt;
         
         if (transform.position.x < leftLimit)
         {
             Destroy(gameObject);
+            
         }
         
         else if (transform.position.y < bottomLimit)
         {
-            
+            playerController.DecreaseHealt();
             Destroy(gameObject);
-            healts--;
-            gameObject.GetComponent<PlayerControllerX>().Healt = healts;
-
+           
 
         }
         else if (transform.position.z > zLimit) 
         {
             Destroy(gameObject);
-            
         }
-
+        //isBoubleDestroy=false;  
     }
 }

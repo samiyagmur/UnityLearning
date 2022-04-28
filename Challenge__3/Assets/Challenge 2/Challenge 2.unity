@@ -223,7 +223,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &116513810
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -570,8 +570,6 @@ GameObject:
   - component: {fileID: 355618744}
   - component: {fileID: 355618746}
   - component: {fileID: 355618747}
-  - component: {fileID: 355618748}
-  - component: {fileID: 355618749}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -593,7 +591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogPrefab: {fileID: 7545542489246091411, guid: 0c67a861e98bdc8419a081e8bf44cd40, type: 3}
   farmerSpeed: 20
-  text: {fileID: 116513809}
+  farmerHealt: 3
 --- !u!4 &355618745
 Transform:
   m_ObjectHideFlags: 0
@@ -639,30 +637,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &355618748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355618743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d429fdef000674ba6879ffa54beb54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &355618749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355618743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd56477307ae34a53ab47afc77a08392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &372164884
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +713,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -756,7 +730,7 @@ RectTransform:
   m_Children:
   - {fileID: 116513808}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1191,7 +1165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768187719
 GameObject:
@@ -1490,6 +1464,10 @@ MonoBehaviour:
   - {fileID: 2178073922435996824, guid: 1d143480adadf43389395930eee2b5cf, type: 3}
   - {fileID: 4524317531697499709, guid: a325bcb65fd94414191d0ddc2514e2dc, type: 3}
   - {fileID: 7945815000853930370, guid: fc41e6839a5494e0cbaea5f0081c271d, type: 3}
+  dogPrefabs:
+  - {fileID: 4321340570223847681, guid: b40332a1e27b0a14aaf507cb4f13510e, type: 3}
+  - {fileID: 4321340570223847681, guid: b40332a1e27b0a14aaf507cb4f13510e, type: 3}
+  - {fileID: 4321340570223847681, guid: b40332a1e27b0a14aaf507cb4f13510e, type: 3}
 --- !u!1 &1025854373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1553,50 @@ Transform:
   m_Father: {fileID: 347020520}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1424273092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424273093}
+  - component: {fileID: 1424273094}
+  m_Layer: 0
+  m_Name: UI_Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1424273093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424273092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1424273094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424273092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93b89de20b07974d904a88f20372eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 116513809}
 --- !u!1 &1518474490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,55 +2156,6 @@ Transform:
   - {fileID: 1857390776}
   m_Father: {fileID: 1025854375}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2102118474
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2102118476}
-  - component: {fileID: 2102118475}
-  m_Layer: 0
-  m_Name: Spawn Animal Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2102118475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102118474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a340cfa57c36fad4a8f7f04da53b4730, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dogPrefabs:
-  - {fileID: 4321340570223847681, guid: b40332a1e27b0a14aaf507cb4f13510e, type: 3}
-  - {fileID: 4321340570223847681, guid: b40332a1e27b0a14aaf507cb4f13510e, type: 3}
-  - {fileID: 4321340570223847681, guid: b40332a1e27b0a14aaf507cb4f13510e, type: 3}
-  spawnPos: {x: 0, y: 0, z: 0}
-  spawnRot: {x: 0, y: 0, z: 0}
---- !u!4 &2102118476
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102118474}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: -30}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2107166759
 GameObject:

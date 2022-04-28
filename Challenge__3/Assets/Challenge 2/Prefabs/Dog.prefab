@@ -1080,8 +1080,8 @@ GameObject:
   - component: {fileID: 7545542489246422573}
   - component: {fileID: 7545542489255541851}
   - component: {fileID: 7545542488060051944}
-  - component: {fileID: 7545542488060051946}
   - component: {fileID: 2162053954917560119}
+  - component: {fileID: 5693696700217821322}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Dog
@@ -1172,19 +1172,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11581425, y: 0.2105696, z: 0.25789708}
   m_Center: {x: 0.005066282, y: 0.08091507, z: 0.024884105}
---- !u!114 &7545542488060051946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7545542489246091411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba24ec01e08d4e8596c800afced39e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!114 &2162053954917560119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,6 +1184,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd56477307ae34a53ab47afc77a08392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5693696700217821322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545542489246091411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a17adb9aac962a49ba082dd79f943b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &7545542489246091989
 GameObject:
   m_ObjectHideFlags: 0
