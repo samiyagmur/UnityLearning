@@ -24,7 +24,7 @@ public class SpawnManagerX : MonoBehaviour
     private float spawnYPos = 0;
     private float spawnZPos = -30;
     private float spawnDogStartTime = 1f;
-    private float spawnRepeat = 0.5f;
+    private float spawnRepeat = 2f;
 
     
 

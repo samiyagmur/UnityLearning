@@ -13,8 +13,11 @@ public class PlayerControllerX : MonoBehaviour
     private float nextFire = 0;
     private float horizontalInput;
     public float farmerSpeed = 5f;
-    public float farmerHealt = 3f;
+    public float farmerHealt = 10f;
+    public float farmerScore;
 
+    
+    
     //private bool Ýsde;
     private void Start()
     {   
@@ -59,6 +62,11 @@ public class PlayerControllerX : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;
         }
     }
+    public void IncreaseScore()
+    {
+        farmerScore++;
+    }
+    
     
 
 }

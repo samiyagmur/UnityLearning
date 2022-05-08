@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class DestroyOutOfBoundsX : MonoBehaviour
 {
-    private float leftLimit = -30f;
+    private float leftLimit = -35f;
     private float bottomLimit = -5f;
     private float zLimit = 10f;
-    private PlayerControllerX playerController;
+    PlayerControllerX playerController;
+    DogMovement dogMovement;
 
     private void Awake()
     {
         playerController = FindObjectOfType<PlayerControllerX>();
+        dogMovement = FindObjectOfType<DogMovement>();
+        
     }
 
     void Update()
@@ -27,6 +30,7 @@ public class DestroyOutOfBoundsX : MonoBehaviour
         else if (transform.position.y < bottomLimit)
         {
             playerController.DecreaseHealt();
+            dogMovement.GetDogCurrentHealtDecrease();
             Destroy(gameObject);
            
 

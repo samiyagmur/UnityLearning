@@ -4,22 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour
-{
-    public Text text;
+{   
+    public Text textHealt;
+    public Text textScore;
     PlayerControllerX playerController;
-    
-    
-    
-    void Start() 
+    private void Awake()
     {
+        
         playerController = FindObjectOfType<PlayerControllerX>();
     }
-
     // Update is called once per frame
     void Update()
-    {   
+    {
         
-        text.text = playerController.farmerHealt.ToString();
+        textScore.text ="Score:"+playerController.farmerScore.ToString();
+        textHealt.text ="Healt:"+playerController.farmerHealt.ToString();
+
     }
+    
     
 }
