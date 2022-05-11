@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    playerInput playerInput;
+    playerInput _playeInput;
+    playerMovement _playerMovement;
 
     private void Start()
     {
-        playerInput = new playerInput();
+        _playeInput = new playerInput();
+        _playerMovement = new playerMovement(GetComponent<Rigidbody>(),5);
     }
 
     private void Update()
     {
-        playerInput.SetInput();
+        _playeInput.SetInput();
 
     }
 }
