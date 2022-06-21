@@ -2,35 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
 public class MousePos : MonoBehaviour
 {
     Camera mainCam;
-    [SerializeField] List<GameObject> prefabs;
-    GameObject changabeGameObj;
     Vector3 _mousePos;
     Rigidbody _rb;
-
+    UIMeneger _instance;
+   
+    
     
 
     private void Start()
-    {
+    {   _instance=FindObjectOfType<UIMeneger>(); 
         _rb=GetComponent<Rigidbody>();
         mainCam=Camera.main;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
-
-
-
         SpawnAtMousePos();
-
-
-
     }
 
     private void SpawnAtMousePos()
@@ -41,19 +38,21 @@ public class MousePos : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray,out hit))
             {
-                Instantiate(changabeGameObj, new Vector3(hit.point.x, hit.point.y+ changabeGameObj.transform.localScale.y/2, hit.point.z),Quaternion.identity);
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    if (_instance.GetCurrentGameObject()!=null)
+                    {
+
+                    }
+                    
+                }
+                    
+                
             }
         }
     }
 
-    public void OnButtonRightClick()
-    {
-        changabeGameObj = prefabs[0];
-    }
-    public void OnButtonLeftClick()
-    {
-        changabeGameObj = prefabs[1];
-    }
+    
 
 
 }
