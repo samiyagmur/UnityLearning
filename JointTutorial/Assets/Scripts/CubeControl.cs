@@ -6,6 +6,7 @@ public class CubeControl : MonoBehaviour
 {   
    
     [SerializeField] private float speed = 10;
+    private float backspeed = 30f;
     bool IsCollision;
     Rigidbody rb;
     float force = 3f;
@@ -20,6 +21,8 @@ public class CubeControl : MonoBehaviour
     {
         
         rb =GetComponent<Rigidbody>();
+        
+
     }
     private void FixedUpdate()
     {
@@ -30,12 +33,21 @@ public class CubeControl : MonoBehaviour
             
             if (transform.position.z>=-15f)
             {
+                
                 speed = 0;
-                rb.AddForce(new Vector3(0, 0, -force), ForceMode.Impulse);
+
+                rb.velocity = Vector3.back * backspeed;
+
+                backspeed -=0.75f;
+
+                Debug.Log(backspeed);
+
+                //rb.AddForce(new Vector3(0, 0, -force), ForceMode.Impulse);
             }
             else
             {
-                IsCollision=false;
+                backspeed = 30f;
+                IsCollision =false;
 
                 Invoke("TimeDelay", 3);
             }
