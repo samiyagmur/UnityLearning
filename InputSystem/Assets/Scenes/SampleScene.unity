@@ -339,9 +339,9 @@ GameObject:
   - component: {fileID: 1542108561}
   - component: {fileID: 1542108560}
   - component: {fileID: 1542108559}
-  - component: {fileID: 1542108563}
   - component: {fileID: 1542108564}
   - component: {fileID: 1542108565}
+  - component: {fileID: 1542108563}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -453,14 +453,42 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 945ebb24-132c-43d2-bd11-c9fe709f032e
-    m_ActionName: Player Control/Movement[/Keyboard/q,/Keyboard/e,/Keyboard/a,/Keyboard/d,/Keyboard/w,/Keyboard/s]
+    m_ActionName: Player Control/Movement[/Keyboard/a,/Keyboard/d,/Keyboard/w,/Keyboard/s]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1542108564}
+        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d7cac8b2-0b81-4cc3-8587-d25bbc223b3c
     m_ActionName: Player Control/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1542108564}
+        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
+        m_MethodName: Submit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dd2ac965-024f-46b2-9450-ee23ed95067a
+    m_ActionName: UI/Submit[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player Control
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1542108564
