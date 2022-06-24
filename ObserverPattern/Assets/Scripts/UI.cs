@@ -2,24 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI : MonoBehaviour
+public class UI : Subject
 {   
-    
-
     public void BackMovementInput()
     {
-        Debug.Log("Back");
+        Notify(NotificationType.ForwardButton);
     }
     public void RightMovementInput()
     {
-        Debug.Log("Right");
+        Notify(NotificationType.BackButton);
     }
     public void LeftMovementInput()
     {
-        Debug.Log("Left");
+        Notify(NotificationType.RightButton);
     }
     public void ForwardMovementInput()
     {
-        Debug.Log("Forward");
+        Notify (NotificationType.LeftButton);
     }
 }

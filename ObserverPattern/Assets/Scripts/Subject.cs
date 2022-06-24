@@ -8,7 +8,7 @@ public abstract class Subject : MonoBehaviour
 
     [SerializeField] private SubjectType subjectType;
 
-    public SubjectType SubjectType=> subjectType
+    public SubjectType SubjectType => subjectType;
     public void RegisterObserver(Observer observer)
     {
         if (_observers==null)
@@ -24,5 +24,13 @@ public abstract class Subject : MonoBehaviour
     private void Start()
     {
         ObserverMeneger.Instance.RegisterSubject(this);
+    }
+
+    public void Notify(NotificationType notificationType)
+    {
+        foreach (var observer in _observers)
+        {
+            observer.OnNotify(notificationType);
+        }
     }
 }
