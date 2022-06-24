@@ -488,7 +488,7 @@ MonoBehaviour:
     m_ActionName: UI/Submit[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: UI
+  m_DefaultActionMap: Player Control
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1542108564
