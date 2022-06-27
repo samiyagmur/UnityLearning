@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class NewMovementSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //observer
+    Rigidbody rb;
+    private void Start()
     {
-        
+        //NewMovementUI.OnForwardButtonClicked += MoveForward;
+        //NewMovementUI.OnBackButtonClicked += MoveBack;
+        //NewMovementUI.OnRightButtonClicked += MoveRight;
+        //NewMovementUI.OnLeftButtonClicked += MoveLeft;
+
+        NewMovementUI.OnButtonClicked += Move;
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
+
+
+    //public void MoveForward()=>rb.velocity=Vector3.forward;
+    //public void MoveBack()=> rb.velocity=Vector3.back;
+    //public void MoveLeft()=> rb.velocity = Vector3.left;
+    //public void MoveRight()=> rb.velocity = Vector3.right;
+    public void Move(Vector3 direction) =>rb.velocity = direction;
+    
+
 }
